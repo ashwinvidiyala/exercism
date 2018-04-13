@@ -4,7 +4,9 @@ class Grains
   end
 
   def self.total
-    (1..64).reduce { |grains, g| grains + square(g) }
+    # Both are valid
+    # (1..64).reduce { |grains, g| grains + square(g) }
+    (1..64).sum { |g| square(g) }
   end
 end
 
