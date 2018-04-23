@@ -1,7 +1,7 @@
 class Hamming
   def self.compute(word1, word2)
     raise ArgumentError unless word1.length == word2.length
-    word1.chars.zip(word2.chars).select { |a,b| a != b }.count
+    word1.chars.zip(word2.chars).count { |a,b| a != b }
   end
 end
 
